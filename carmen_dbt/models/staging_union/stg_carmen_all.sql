@@ -56,7 +56,7 @@ SELECT
   longitude,
   city,
   country,
-  region_hq,
+  city_agent,
   has_weapon,
   has_hat,
   has_jacket,

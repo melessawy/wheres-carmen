@@ -11,7 +11,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -39,7 +39,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -67,7 +67,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -95,7 +95,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -123,7 +123,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -151,7 +151,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -179,7 +179,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:
@@ -207,7 +207,7 @@ models:
       - name: longitude
       - name: city
       - name: country
-      - name: region_hq
+      - name: city_agent
       - name: has_weapon
         tests:
           - accepted_values:

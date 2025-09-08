@@ -15,7 +15,7 @@ SELECT
   ) AS longitude,
   town AS city,
   nation AS country,
-  report_office AS region_hq,
+  report_office AS city_agent,
   {{ parse_bool('has_weapon') }} AS has_weapon,
   {{ parse_bool('has_hat') }} AS has_hat,
   {{ parse_bool('has_jacket') }} AS has_jacket,

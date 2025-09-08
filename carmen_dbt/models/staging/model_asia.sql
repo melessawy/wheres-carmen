@@ -15,7 +15,7 @@ SELECT
   ) AS longitude,
   city,
   nation AS country,
-  city_interpol AS region_hq,
+  city_interpol AS city_agent,
   {{ parse_bool('has_weapon') }} AS has_weapon,
   {{ parse_bool('has_hat') }} AS has_hat,
   {{ parse_bool('has_jacket') }} AS has_jacket,
