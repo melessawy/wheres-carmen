@@ -1,0 +1,226 @@
+version: 2
+
+models:
+  - name: model_africa
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_america
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_asia
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_atlantic
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_australia
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_europe
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_indian
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+
+  - name: model_pacific
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior

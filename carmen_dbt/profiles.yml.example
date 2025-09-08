@@ -1,0 +1,7 @@
+carmen_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ./target/carmen.duckdb
+      threads: 1

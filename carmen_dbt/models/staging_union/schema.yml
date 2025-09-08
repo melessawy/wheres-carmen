@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_carmen_all
+    columns:
+      - name: date_witness
+      - name: date_agent
+      - name: witness
+      - name: agent
+      - name: latitude
+      - name: longitude
+      - name: city
+      - name: country
+      - name: region_hq
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: behavior
+      - name: region_source
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Africa", "America", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"]

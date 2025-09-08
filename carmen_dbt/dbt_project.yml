@@ -1,0 +1,33 @@
+name: carmen_dbt
+version: '1.0'
+config-version: 2
+
+profile: carmen_profile
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  carmen_dbt:
+    staging:
+      +schema: stg
+      +materialized: view
+    staging_union:
+      +schema: stg
+      +materialized: view
+    marts:
+      normalized:
+        +schema: normalized
+        +materialized: table
+      analytics:
+        +schema: analytics
+        +materialized: view
+seeds:
+  carmen_dbt:
+    region_*:
+      +encoding: utf-8
+      +header: true
+      +quote_columns: true

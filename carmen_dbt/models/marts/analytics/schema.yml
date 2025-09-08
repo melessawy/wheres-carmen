@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: Qa_month_region_most_likely
+    description: >
+      For each month, shows which agency region Carmen Sandiego is most likely to be found.
+    columns:
+      - name: month
+        tests:
+          - not_null
+      - name: region
+      - name: sighting_count
+      - name: most_likely_region
+        tests:
+          - not_null
+
+  - name: Qb_month_prob_armed_jacket_no_hat
+    description: >
+      For each month, probability Carmen is armed AND wearing a jacket, but NOT a hat.
+    columns:
+      - name: month
+      - name: probability
+
+  - name: Qc_top3_behaviors
+    description: >
+      The three most frequently occurring behaviors exhibited by Carmen Sandiego across all data.
+    columns:
+      - name: behavior_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_behavior')
+                field: behavior_id
+      - name: behavior_normalized
+        tests:
+          - not_null
+          - unique
+      - name: cnt
+        tests:
+          - not_null
+
+  - name: Qd_month_prob_top3_behaviors
+    description: >
+      For each month, probability that Carmen exhibits one of her three most occurring behaviors.
+    columns:
+      - name: month
+        tests:
+          - not_null
+      - name: top3_count
+        tests:
+          - not_null
+      - name: probability_top3

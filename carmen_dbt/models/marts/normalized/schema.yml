@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: dim_agent
+    columns:
+      - name: agent_id
+        tests:
+          - not_null
+      - name: agent_name
+        tests:
+          - not_null
+      - name: agent_city
+
+  - name: dim_appearance
+    columns:
+      - name: appearance_id
+        tests:
+          - not_null
+      - name: has_weapon
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_hat
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+      - name: has_jacket
+        tests:
+          - accepted_values:
+              arguments:
+                values: [true, false]
+
+  - name: dim_behavior
+    columns:
+      - name: behavior_id
+        tests:
+          - not_null
+      - name: behavior_normalized
+      - name: behavior_example
+
+  - name: dim_location
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: country
+        tests:
+          - not_null
+      - name: latitude
+      - name: longitude
+
+  - name: dim_witness
+    columns:
+      - name: witness_id
+        tests:
+          - not_null
+      - name: witness_name
+        tests:
+          - not_null
+
+  - name: fact_sighting
+    columns:
+      - name: sighting_id
+        tests:
+          - not_null
+      - name: date_witness
+        tests:
+          - not_null
+      - name: date_agent
+        tests:
+          - not_null
+      - name: agent_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_agent')
+                field: agent_id
+      - name: witness_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_witness')
+                field: witness_id
+      - name: location_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_location')
+                field: location_id
+      - name: appearance_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_appearance')
+                field: appearance_id
+      - name: behavior_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_behavior')
+                field: behavior_id
+      - name: region_source
+        tests:
+          - not_null
+      - name: raw_behavior_text
+        tests:
+          - not_null
